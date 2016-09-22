@@ -23,4 +23,4 @@ end
 #puts "Input cipher offset..."
 #cipher_offset = gets.chomp
 #puts caesar_cipher(text_to_cipher, cipher_offset.to_i)
-puts CaesarCipher.encrypt("It handles commas, sentences.", 11)
+puts CaesarCipher.encrypt("Hello", 1)

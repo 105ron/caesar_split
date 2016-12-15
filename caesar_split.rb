@@ -22,5 +22,24 @@ end
 #text_to_cipher = gets.chomp
 #puts "Input cipher offset..."
 #cipher_offset = gets.chomp
-#puts caesar_cipher(text_to_cipher, cipher_offset.to_i)
-puts CaesarCipher.encrypt("It handles commas, sentences.", 11)
+puts CaesarCipher.encrypt("in", 5)
+puts CaesarCipher.encrypt("hello.", 11)
+def caesar_cipher(string, key) 
+	arr_string = string.downcase.split("") 
+	alpha = ("a".."z").to_a 
+	for i in arr_string do 
+		if alpha.include?(i) 
+			alpha_index = alpha.index(i) 
+			string_index = arr_string.index(i) 
+			if alpha_index + key > 25 
+				key_change = alpha[alpha_index + key - 25 - 1] 
+				arr_string[string_index] = key_change 
+			else 
+				key_change = alpha[alpha_index + key] 
+				arr_string[string_index] = key_change 
+			end 
+		end 
+	end 
+	arr_string.join
+end 
+puts caesar_cipher("in!", 5)

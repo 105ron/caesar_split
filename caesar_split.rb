@@ -22,8 +22,8 @@ end
 #text_to_cipher = gets.chomp
 #puts "Input cipher offset..."
 #cipher_offset = gets.chomp
-puts CaesarCipher.encrypt("in", 5)
-puts CaesarCipher.encrypt("hello.", 11)
+#puts CaesarCipher.encrypt("in", 5)
+#puts CaesarCipher.encrypt("hello.", 11)
 def caesar_cipher(string, key) 
 	arr_string = string.downcase.split("") 
 	alpha = ("a".."z").to_a 
@@ -43,3 +43,6 @@ def caesar_cipher(string, key)
 	arr_string.join
 end 
 puts caesar_cipher("in!", 5)
+#puts caesar_cipher(text_to_cipher, cipher_offset.to_i)
+puts CaesarCipher.encrypt("Hello", 1)
+
